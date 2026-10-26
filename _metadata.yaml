@@ -1,0 +1,177 @@
+# File Info
+
+
+file_type: demo
+
+
+# Demo Info
+
+
+# The type of demo.
+# Supported options:
+#    application
+#    cloud_console
+#    guided_doc
+#    presentation
+#    video
+type: guided_doc
+
+
+# The name of the demo.
+title: Dataform Demo Project
+
+
+# A short description of the demo.
+thumbnail_summary: A simple ELT pipeline demonstrating Medallion architecture (Bronze, Silver, Gold layers) using Dataform and BigQuery.
+
+
+# A summary of the demo's intention. Markdown supported.
+purpose: This project demonstrates how to build and orchestrate an ELT pipeline in Google Cloud using Dataform and BigQuery Public Datasets (Austin 311 service requests). It showcases a Medallion architecture spanning multiple GCP projects for Bronze, Silver, and Gold layers, provisioned with Terraform and executable via the Dataform UI or a REST API CI/CD simulator.
+
+
+# A summary of the demo's business value. Markdown supported.
+business_value: Enables organizations to implement scalable, maintainable, and governed data transformation pipelines. By separating data into structured Medallion layers across isolated GCP projects, businesses can improve data quality, streamline compliance, and accelerate time-to-insight for analytics in BigQuery.
+
+
+# A summary of the demo's technical value. Markdown supported.
+technical_value: Showcases Dataform SQLX definitions, multi-project data modeling (Bronze raw ingestion, Silver cleansing/enrichment, Gold aggregation), infrastructure-as-code deployment via Terraform, Secret Manager integration for Git SSH deploy keys, and programmatic compilation and execution via the Dataform REST API.
+
+
+
+
+# Demo Attribution
+
+
+# The Googler who owns this demo. This user is the point of contact for the demo
+# and is responsible for maintaining the demo.
+# This user has edit access to the demo.
+owner: pablofl
+
+
+# [Optional] The Moma Team ID that owns this demo.
+# Displayed as an owner of the demo for attribution.
+# Moma Team IDs can be found in the Team Page URL.
+# Example: https://moma.corp.google.com/team/1234 --> ID = 1234
+team_owner:
+
+
+# [Optional] Googlers and Moma Teams that contributed to this demo.
+# Contributors are listed on the demo page for attribution.
+# These users have edit access to the demo.
+contributors:
+
+
+# [Optional] Specify a channel ID to add this demo to a channel.
+# The owner of the demo must be a member of the channel.
+# Channel IDs can be found in the Channel Page URL.
+# Example: https://cloud-demo-hub.corp.google.com/channels/123 --> ID = 123
+channel_id:
+
+
+
+
+# Demo Assets
+
+
+# [Optional] List URLs to images that will be displayed on the demo.
+# The first image is used as the demo's thumbnail.
+# You may only choose up to 10 images.
+# Images must have a format of PNG or JPG.
+# Use go/snipit or reference an image from the web.
+images:
+  - https://screenshot-v2.corp.google.com/image/17j9praqnnog8.png
+
+
+# [Optional] Provide the link to your demo automation folder on go/demos GOB repo.
+# See go/demo-automation-guide for more information.
+click_to_deploy_path:
+
+
+# A link to instructions on how to use the demo. See go/demo-guide-template for more.
+# Ensure “viewer” access is provided to the following identities:
+# - Alphabet FTEs: alphabet@google.com
+# - Alphabet TVCs: alphabet-extendedworkforce@google.com
+# - Google Interns: googlers-intern@google.com
+demo_guide: https://docs.google.com/document/d/1p5yp8Jd_aFpJ4r--PoTyAhhPt2ekkL9AsaRM9kq9gyU/edit?resourcekey=0-N72bkfthkvKYNDNyLE5rVg&tab=t.0
+
+
+# [Optional] Assets belonging to the demo, such as a website, video, code repository, etc.
+artifacts:
+  # Title of the artifact. Must be unique.
+  - title: Dataform Demo Repository
+
+
+    # Artifact Type. Supported Options:
+    #    blueprint
+    #    code_repo
+    #    colab
+    #    cloud_console
+    #    document
+    #    live_application
+    #    other_unspecified
+    #    slide_deck
+    #    video
+    type: code_repo
+
+
+    # Direct URL to the artifact.
+    # Ensure “viewer” access is provided to the following identities:
+    # - Alphabet FTEs: alphabet@google.com
+    # - Alphabet TVCs: alphabet-extendedworkforce@google.com
+    # - Google Interns: googlers-intern@google.com
+    link: https://github.com/cloud-gtm/demo-eng-dataform-elt-medallion/tree/main
+
+
+# [Optional] Designate an asset as the demo's key asset.
+#
+# This asset will be featured as a button on the top of the demo's page.
+# Artifact Title must match to one of the artifacts listed in `artifacts`.
+featured_artifact_title: Dataform Demo Repository
+
+
+# [Optional] Feature a supporting video. This video will be
+# embedded in its own section on the demo's page.
+#
+# Artifact Title must match to one of the artifacts listed in `artifacts`.
+# Artifact URL must be a YouTube, Drive, Broadcast, or Screencast link.
+featured_video_artifact_title:
+
+
+
+
+# Demo Metadata
+
+
+# Relevant industries.
+# Supported options:
+#    all
+#    retail
+#    healthcare_life_services
+#    financial_services
+#    telecommunications
+#    media_entertainment
+#    public_sector_government
+#    public_sector
+#    manufacturing
+#    education
+#    gaming
+#    consumer_packaged_goods
+#    supply_chain
+industries:
+  - all
+
+
+# Products featured by the demo.
+# Find all the available products here: http://go/demos/products
+# List the corresponding Title slugs below.
+products:
+  - dataform
+  - bigquery
+
+# Add restriction labels if one or more of these options are applicable.
+# Supported options:
+#    restricted       Data may be confidential. Present and share to customer
+#                     at your own discretion under NDA or other applicable restrictions.
+#    not_anonymized   Contains info or data of specific customer.
+#                     MUST anonymize before sharing or presenting to customer.
+content_restriction_labels:

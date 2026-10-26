@@ -1,0 +1,14 @@
+dataformCoreVersion: 3.0.0
+defaultLocation: US
+defaultDataset: data_processing
+defaultAssertionDataset: dataform_demo_assertions
+defaultProject: "your-gcp-project"
+
+vars:
+  bronze_project: "your-gcp-project"
+  silver_project: "your-gcp-project"
+  gold_project: "your-gcp-project"
+  bronze_dataset: "raw"
+  silver_dataset: "cleanse"
+  gold_dataset: "data_product"
+  assertion_dataset_id: "dataform_demo_assertions"

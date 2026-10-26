@@ -1,0 +1,12 @@
+config {
+    type: "assertion",
+    database: dataform.projectConfig.vars.silver_project,
+    schema: dataform.projectConfig.vars.assertion_dataset_id,
+    name: "silver_austin_311_non_null",
+    tags: ["silver"],
+    description: "Assert request_id and created_date are non-null in silver"
+}
+
+SELECT *
+FROM ${ref("silver_austin_311")}
+WHERE request_id IS NULL OR created_date IS NULL

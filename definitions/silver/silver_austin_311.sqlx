@@ -1,0 +1,18 @@
+config {
+  type: "table",
+  database: dataform.projectConfig.vars.silver_project,
+  schema: dataform.projectConfig.vars.silver_dataset,
+  name: "silver_austin_311",
+  tags: ["silver"],
+  description: "Cleaned and transformed Austin 311 service requests",
+}
+
+SELECT
+  unique_key AS request_id,
+  created_date,
+  close_date,
+  TIMESTAMP_DIFF(close_date, created_date, DAY) AS resolution_time_days,
+  LOWER(status) AS status,
+  complaint_description AS description
+FROM ${ref("bronze_austin_311")}
+WHERE unique_key IS NOT NULL

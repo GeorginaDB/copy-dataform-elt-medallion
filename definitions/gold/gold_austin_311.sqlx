@@ -1,0 +1,18 @@
+config {
+  type: "table",
+  database: dataform.projectConfig.vars.gold_project,
+  schema: dataform.projectConfig.vars.gold_dataset,
+  name: "gold_austin_311",
+  tags: ["gold"],
+  description: "Aggregated Austin 311 service requests by description and status"
+}
+
+SELECT
+  description,
+  status,
+  COUNT(request_id) AS total_requests,
+  AVG(resolution_time_days) AS avg_resolution_time_days,
+  MIN(created_date) AS first_request_date,
+  MAX(created_date) AS latest_request_date
+FROM ${ref("silver_austin_311")}
+GROUP BY 1, 2

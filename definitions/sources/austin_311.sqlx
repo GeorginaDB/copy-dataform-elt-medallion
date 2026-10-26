@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "bigquery-public-data",
+  schema: "austin_311",
+  name: "311_service_requests",
+  description: "Austin 311 service requests public dataset"
+}
